@@ -1,0 +1,92 @@
+### Read all users (req to protected route)
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbnVAbWFpbC5jb20iLCJpYXQiOjE3NzI4Nzg0ODgsImV4cCI6MTc3Mjg3ODQ5OH0.p0L09CEOhvmKZJRzRPD9kroLnbS_25SXmfN_UbXaBEA; Path=/; HttpOnly; SameSite=Lax
+
+### Read a user by id
+GET http://localhost:4000/user-api/user
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbnVAbWFpbC5jb20iLCJpYXQiOjE3NzI4Nzg0ODgsImV4cCI6MTc3Mjg3ODQ5OH0.p0L09CEOhvmKZJRzRPD9kroLnbS_25SXmfN_UbXaBEA; Path=/; HttpOnly; SameSite=Lax
+
+###  //line break
+
+### Create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbnVAbWFpbC5jb20iLCJpYXQiOjE3NzI4Nzg0ODgsImV4cCI6MTc3Mjg3ODQ5OH0.p0L09CEOhvmKZJRzRPD9kroLnbS_25SXmfN_UbXaBEA; Path=/; HttpOnly; SameSite=Lax
+
+{
+    "username":"moulya",
+    "password":"moulya",
+    "email":"moulya@mail.com",
+    "age": 19
+}
+
+### User Login
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email": "moulya@mail.com",
+    "password": "moulya"
+}
+
+### Update a user
+PUT http://localhost:4000/user-api/users/69aa917821e2be12a26fa9aa
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbnVAbWFpbC5jb20iLCJpYXQiOjE3NzI4Nzg0ODgsImV4cCI6MTc3Mjg3ODQ5OH0.p0L09CEOhvmKZJRzRPD9kroLnbS_25SXmfN_UbXaBEA; Path=/; HttpOnly; SameSite=Lax
+
+{
+    "username":"moulyaa",
+    "password":"chinnu16",
+    "email":"moulya@mail.com",
+    "age": 19
+}
+
+### Delete a user by id
+DELETE http://localhost:4000/user-api/users/69aa629143fb309748e05b5f
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbnVAbWFpbC5jb20iLCJpYXQiOjE3NzI4Nzg0ODgsImV4cCI6MTc3Mjg3ODQ5OH0.p0L09CEOhvmKZJRzRPD9kroLnbS_25SXmfN_UbXaBEA; Path=/; HttpOnly; SameSite=Lax
+
+### Add product to user cart
+PUT http://localhost:4000/user-api/cart/product-id/69ab0a8222a38e90fcf72971
+
+
+//post request and put requests should send data to the API as body of the request object
+//get and delete requests do not support body of the request object
+//so that these two requests send data through endpoint
+
+
+
+
+### Read all products
+GET http://localhost:4000/product-api/products
+
+
+### Read product by id
+GET http://localhost:4000/product-api/products/102
+
+
+### Create new Product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productId" : 102,
+    "productName" : "bottle",
+    "price" : 12000,
+    "brand" : "stanley"
+}
+
+
+### Update a Product
+PUT http://localhost:4000/product-api/products/101
+Content-Type: application/json
+
+{
+    "productId" : 101,
+    "productName" : "laptop",
+    "price" : 48000,
+    "brand" : "HP"
+}
+
+
+### Delete a Product
+DELETE http://localhost:4000/product-api/products/102

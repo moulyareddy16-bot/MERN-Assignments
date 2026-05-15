@@ -1,0 +1,19 @@
+body{
+    background-color: bisque;
+}
+img{
+    display:block;
+    margin:auto;
+}
+h1{
+    text-align: center;
+}
+h3{
+    color: red;
+}
+div{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+}
+
