@@ -18,6 +18,11 @@ app.use(
 //add body parser middleware
 app.use(exp.json())
 
+// Root route for health check
+app.get("/", (req, res) => {
+    res.send("Server is running...");
+})
+
 app.use("/employee-api", employeeApp)
 
 const port = process.env.PORT || 5000
