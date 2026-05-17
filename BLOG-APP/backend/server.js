@@ -40,8 +40,6 @@ app.use("/auth", commonApp);
 
 const connectDB = async () => {
   try {
-    const maskedURI = process.env.DB_URL ? process.env.DB_URL.replace(/:([^@]+)@/, ":****@") : "undefined";
-    console.log("Connecting to database with URI:", maskedURI);
     await mongoose.connect(process.env.DB_URL);
 
     console.log("MongoDB Connected Successfully");
