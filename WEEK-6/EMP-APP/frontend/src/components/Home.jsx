@@ -1,6 +1,5 @@
 import {useContext} from 'react';
 import { counterContextObj } from '../contexts/ContextProvider';
-import Test from './Test';
 import { useCounterStore } from '../store/CounterStore';
 
 function Home() {
@@ -22,8 +21,6 @@ function Home() {
       <button onClick={incrementCounter} className='bg-gray-400 border border-gray-900 block mx-auto text-3xl mb-3'>+1</button>
 
       <button onClick={decrementCounter} className='bg-gray-400 border border-gray-900 block mx-auto text-3xl mb-3'>-1</button>
-
-      <Test />
     </div>
   )
 }
