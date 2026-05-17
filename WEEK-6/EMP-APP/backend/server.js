@@ -9,11 +9,9 @@ config();
 const app=exp()
 
 //add cors middleware
-app.use(
-    cors({
-        origin:[process.env.FRONTEND_URL || "http://localhost:5173"]
-    }) 
-)
+app.use(cors({
+    origin: "*"
+}))
 
 //add body parser middleware
 app.use(exp.json())
